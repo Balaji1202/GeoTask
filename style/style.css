@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* #2193b0 → #6dd5ed */
+    --light-theme-body: white;
+    --light-theme-text: black;
+    /*  */
+    --dark-theme-body: black;
+    --dark-theme-text: white;
+    /*  */
+    --dark-image-url: url('./../assets/world-dark.svg');
+    --light-image-url: url('./../assets/world.svg');
+    /*  */
+    --theme-base-body: var(--dark-theme-body);
+    --theme-base-text: var(--dark-theme-text);
+    --theme-image-url: var(--dark-image-url);
+    --opacity: 0.0;
+    --opacity-color: 255;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(rgba(var(--opacity-color), var(--opacity-color), var(--opacity-color), var(--opacity)), rgba(var(--opacity-color), var(--opacity-color), var(--opacity-color), var(--opacity))), var(--theme-image-url);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body::after {
+    opacity: 0.7;
+}
