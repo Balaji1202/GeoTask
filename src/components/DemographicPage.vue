@@ -32,7 +32,6 @@ export default {
 	}
 	@media (max-width: 640px) {
 		.child-element {
-			padding-bottom: 70px;
 			position: relative;
 			width: 500px;
 			height: 500px;
@@ -40,7 +39,6 @@ export default {
 	}
 	@media (max-width: 500px) {
 		.child-element {
-			padding-bottom: 70px;
 			position: relative;
 			width: 400px;
 			height: 400px;
@@ -48,7 +46,6 @@ export default {
 	}
 	@media (max-width: 400px) {
 		.child-element {
-			padding-bottom: 70px;
 			position: relative;
 			width: 300px;
 			height: 400px;
@@ -56,7 +53,6 @@ export default {
 	}
 	@media (max-width: 300px) {
 		.child-element {
-			padding-bottom: 70px;
 			position: relative;
 			width: 250px;
 			height: 350px;

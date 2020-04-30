@@ -18,8 +18,39 @@
     --theme-base-body: var(--dark-theme-body);
     --theme-base-text: var(--dark-theme-text);
     --theme-image-url: var(--dark-image-url);
-    --opacity: 0.0;
-    --opacity-color: 255;
+    --opacity: 0;
+    --opacity-color: 0;
+    font-size: 18px;
+}
+
+@media (min-width: 0px) {
+     :root {
+        font-size: 9px;
+    }
+}
+
+@media (min-width: 400px) {
+     :root {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 600px) {
+     :root {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 800px) {
+     :root {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1000px) {
+     :root {
+        font-size: 15px;
+    }
 }
 
 body {
@@ -29,6 +60,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    height: 100%;
 }
 
 body::after {

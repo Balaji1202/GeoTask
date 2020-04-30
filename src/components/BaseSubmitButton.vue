@@ -5,7 +5,9 @@
 			class="button"
 			@click="generateReport">Generate report</button>
 		</div>
-		<div ref="snackbar" id="snackbar">{{errorMsg}}</div>
+		<div class="snackbar-container">
+			<div ref="snackbar" id="snackbar">{{errorMsg}}</div>
+		</div>
 	</div>
 </template>
 
@@ -43,39 +45,44 @@ export default {
 		flex-basis: 100%;
 		align-items: center;
 		flex-direction: column;
+		padding-bottom: 100px;
 	}
 	.button {
 		background: none;
 		border-radius: 20px;
 		border: 1px solid var(--theme-base-text);
 		padding: 15px 30px;
-		font-size: 16px;
+		font-size: 1.4rem;
 		color: var(--theme-base-text);
 		cursor: pointer;
 		outline: none;
 		box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
 	}
 	.button:hover {
-		font-size: 17px;
+		font-size: 1.45rem;
 		box-shadow: 3px 2px rgba(0, 0, 0, 0.3);
 	}
 </style>
 
 <style>
 	/* The snackbar - position it at the bottom and in the middle of the screen */
+.snackbar-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
 #snackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
-  min-width: 250px; /* Set a default minimum width */
-  margin-left: -165px; /* Divide value of min-width by 2 */
+  min-width: 2rem; /* Set a default minimum width */
   background-color: #333; /* Black background color */
   color: #fff; /* White text color */
   text-align: center; /* Centered text */
   border-radius: 10px; /* Rounded borders */
-  padding: 16px; /* Padding */
+  padding: 1rem; /* Padding */
   position: fixed; /* Sit on top of the screen */
   z-index: 1; /* Add a z-index if needed */
-  left: 50%; /* Center the snackbar */
-  bottom: 30px; /* 30px from the bottom */
+	bottom: 30px; /* 30px from the bottom */
+	font-size: 1.5rem;
 }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */

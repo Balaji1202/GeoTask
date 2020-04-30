@@ -1,7 +1,7 @@
 <template>
 	<div class="header">
 		<div class="title">
-			GeoSpoc
+			GeoTask
 		</div>
 		<div class="subtitle title">
 			Demographic Report
@@ -50,6 +50,9 @@ export default {
 			let display = `--${this.theme}-image-url`;
 			let theme = getComputedStyle(root).getPropertyValue(display);
 			root.style.setProperty('--theme-image-url', theme);
+			let opacityColor = this.theme === 'dark'? 0 : 255;
+			root.style.setProperty('--opacity-color', opacityColor);
+			let opacity = 0.5
 		},
 		switchTheme() {
 			this.darkTheme = !this.darkTheme;
@@ -73,8 +76,8 @@ export default {
 
 <style scoped>
 	.theme-switcher-img {
-		width: 40px;
-		height: 40px;
+		width: 3.4rem;
+		height: 3.4rem;
 		animation: rotate-switcher 3s linear infinite;
 		animation-play-state: paused;
 	}
@@ -94,7 +97,7 @@ export default {
 		text-align: center;
 	}
 	.subtitle {
-		font-size: 1.5rem;
+		font-size: 1.7rem;
 	}
 	.header {
 		position: fixed;
@@ -105,7 +108,7 @@ export default {
 		height: 10vh;
 		background: var(--theme-base-body);
 		color: var(--theme-base-text);
-		font-size: 2rem;
+		font-size: 2.5rem;
 		z-index: 100;
 		border-bottom: 1px solid var(--theme-base-text);
 		opacity: 0.9;
@@ -138,7 +141,7 @@ export default {
   margin-left: -75px;
   opacity: 0;
 	transition: opacity 0.3s;
-	font-size: 15px;
+	font-size: 1.2rem;
 }
 
 .tooltip .tooltiptext::after {

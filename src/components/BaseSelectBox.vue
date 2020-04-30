@@ -70,7 +70,7 @@ export default {
 	
 
 	.select-label {
-		font-size: 30px;
+		font-size: 2.5rem;
 		padding: 5px;
 		color: var(--theme-base-text);
 	}
@@ -95,27 +95,28 @@ export default {
 	.select {
 		position: relative;
 		display: flex;
-		width: 250px;
-		height: 3em;
+		width: 23rem;
+		height: 3.5rem;
 		line-height: 3;
 		overflow: hidden;
-		border-radius: .25em;
+		border-radius: .25rem;
 	}
 
 	select {
 		flex: 1;
-		padding: 0 .5em;
+		padding: 0.7rem .7rem;
 		color: var(--theme-base-text);
 		cursor: pointer;
-		font-size: 25px;
+		font-size: 1.5rem;
 	}
 	/* Arrow */
 	.select::after {
 		content: '\25BC';
+		font-size: 1.2rem;
 		position: absolute;
 		top: 0;
 		right: 0;
-		padding: 0 1em;
+		padding: 0.25rem 1rem;
 		background-color: var(--theme-base-text);
 		color: var(--theme-base-body);
 		cursor: pointer;
@@ -132,6 +133,6 @@ export default {
 		color: var(--theme-base-text);
 	}
 	 .select-container{
-		 padding: 50px;
+		 padding: 5rem;
 	 }
 </style>

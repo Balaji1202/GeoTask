@@ -1,5 +1,6 @@
 <template>
 	<div class="container">
+		<div class="info-container">Know your demography</div>
 		<div class="select-container">
 			<BaseSelectBox
 				@search-by-selected="this.setSearchBy"
@@ -46,6 +47,12 @@ export default {
 		},
 		generateReport() {
 			this.$emit('generate-report');
+			this.changeOpacity();
+		},
+		changeOpacity() {
+			let root = document.documentElement;
+			let opacity = 0.5
+			root.style.setProperty('--opacity', opacity);
 		}
 	},
 	computed: {
@@ -64,6 +71,13 @@ export default {
 		left: 0;
 		right: 0;
 		position: fixed;
+		overflow: auto;
+	}
+	.info-container {
+		margin: 12rem 0 5rem 0;
+		color: var(--theme-base-text);
+		font-size: 2.2rem;
+		text-align: center;
 	}
 	.select-container {
 		display: flex;
@@ -71,13 +85,12 @@ export default {
 		align-items: center;
 		flex-direction: row;
 		flex-wrap: wrap;
-		margin: 100px;
-    padding: 30px;
+		padding-bottom: 8rem;
 	}
-	@media (max-width: 900px) {
+	@media (max-width: 800px) {
 		.select-container {
-			margin: 80px;
-    	padding: 30px;
+			margin: 5rem;
+    	padding: 3rem;
 		}
 	}
 </style>
