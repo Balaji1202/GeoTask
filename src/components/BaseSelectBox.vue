@@ -70,7 +70,7 @@ export default {
 	
 
 	.select-label {
-		font-size: 2.5rem;
+		font-size: 2.0rem;
 		padding: 5px;
 		color: var(--theme-base-text);
 	}
